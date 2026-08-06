@@ -1,0 +1,336 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mini Golf</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         MENU INICIAL
+    ========================== -->
+
+    <div id="menu" class="screen">
+
+        <div class="menu-box">
+
+            <div class="logo">
+                🏌️
+            </div>
+
+            <h1>MINI GOLF</h1>
+
+            <p class="subtitle">
+                Desafie sua precisão!
+            </p>
+
+            <button id="startButton" class="main-button">
+                JOGAR
+            </button>
+
+            <div class="instructions-menu">
+
+                <p>🖱️ Clique e arraste a partir da bola</p>
+
+                <p>🎯 Acerte o buraco com o menor número de tacadas</p>
+
+                <p>🏆 Complete as 3 fases</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         JOGO
+    ========================== -->
+
+    <div class="game-container hidden" id="gameContainer">
+
+        <header>
+
+            <div class="title">
+
+                <span>🏌️</span>
+
+                <h1>Mini Golf</h1>
+
+            </div>
+
+
+            <div class="info">
+
+                <div class="info-box">
+
+                    <span>FASE</span>
+
+                    <strong id="level">1</strong>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <span>TACADAS</span>
+
+                    <strong id="shots">0</strong>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <span>PAR</span>
+
+                    <strong id="par">3</strong>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <span>PONTOS</span>
+
+                    <strong id="score">0</strong>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- CAMPO -->
+
+        <main>
+
+            <div id="game">
+
+                <!-- BURACO -->
+
+                <div id="hole">
+
+                    <div class="flag">
+                        🚩
+                    </div>
+
+                    <div class="hole-circle"></div>
+
+                </div>
+
+
+                <!-- OBSTÁCULOS -->
+
+                <div class="obstacle"></div>
+
+                <div class="obstacle"></div>
+
+                <div class="obstacle"></div>
+
+
+                <!-- BOLA -->
+
+                <div id="ball"></div>
+
+
+                <!-- LINHA DE MIRA -->
+
+                <div id="aim-line"></div>
+
+            </div>
+
+
+            <!-- INSTRUÇÕES -->
+
+            <div class="game-info">
+
+                <p>
+                    🖱️
+                    <strong>
+                        Clique e arraste a partir da bola
+                    </strong>
+                    para escolher direção e força.
+                </p>
+
+                <p id="message">
+                    Boa sorte!
+                </p>
+
+            </div>
+
+
+            <!-- BOTÕES -->
+
+            <div class="buttons">
+
+                <button id="restart">
+                    🔄 Reiniciar fase
+                </button>
+
+                <button id="menuButton">
+                    🏠 Menu
+                </button>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- =========================
+         FASE COMPLETA
+    ========================== -->
+
+    <div id="levelComplete" class="screen hidden">
+
+        <div class="result-box">
+
+            <div class="trophy">
+                🏆
+            </div>
+
+            <h2>
+                Fase completa!
+            </h2>
+
+            <p id="levelResult">
+                Excelente!
+            </p>
+
+
+            <div class="result-stats">
+
+                <div>
+
+                    <span>Tacadas</span>
+
+                    <strong id="resultShots">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>Par</span>
+
+                    <strong id="resultPar">
+                        3
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>Pontos</span>
+
+                    <strong id="resultScore">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <button
+                id="nextLevel"
+                class="main-button"
+            >
+                Próxima fase →
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         VITÓRIA FINAL
+    ========================== -->
+
+    <div id="victory" class="screen hidden">
+
+        <div class="victory-box">
+
+            <div class="big-trophy">
+                🏆
+            </div>
+
+
+            <h1>
+                VOCÊ VENCEU!
+            </h1>
+
+
+            <p class="victory-subtitle">
+                Você completou todas as 3 fases!
+            </p>
+
+
+            <div class="final-score">
+
+                <span>
+                    PONTUAÇÃO FINAL
+                </span>
+
+                <strong id="finalScore">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div
+                class="stars"
+                id="stars"
+            >
+                ⭐⭐⭐
+            </div>
+
+
+            <p id="finalMessage">
+                Excelente desempenho!
+            </p>
+
+
+            <button
+                id="playAgain"
+                class="main-button"
+            >
+                Jogar novamente
+            </button>
+
+
+            <button
+                id="backToMenu"
+                class="secondary-button"
+            >
+                Voltar ao menu
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+
